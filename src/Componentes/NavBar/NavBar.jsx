@@ -76,6 +76,47 @@ function NavBar(props) {
 
     history.push(path);
   };
+  
+  const routeChangeDashboard = (e) => {
+    e.preventDefault();
+
+    let path = `/dashboard`;
+
+    history.push(path);
+  };
+
+  const routeChangeCotacoes = (e) => {
+    e.preventDefault();
+
+    let path = `/cotacoes`;
+
+    history.push(path);
+  };
+
+  const routeChangeFornecedores = (e) => {
+    e.preventDefault();
+
+    let path = `/fornecedores`;
+
+    history.push(path);
+  };
+
+
+  const routeChangeRelatorios = (e) => {
+    e.preventDefault();
+
+    let path = `/relatorios`;
+
+    history.push(path);
+  };
+
+  const routeChangeConfiguracoes = (e) => {
+    e.preventDefault();
+
+    let path = `/configuracoes`;
+
+    history.push(path);
+  };
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -114,35 +155,35 @@ function NavBar(props) {
       </div>
       <Divider />
       <List>
-        <ListItem button>
+        <ListItem button onClick={routeChangeDashboard}>
           <ListItemIcon>
             <BarChartIcon />
           </ListItemIcon>
           <ListItemText primary={"Dashboard"} />
         </ListItem>
         <Divider />
-        <ListItem button key={"cotacoes"}>
+        <ListItem button onClick={routeChangeCotacoes}>
           <ListItemIcon>
             <MonetizationOnIcon />
           </ListItemIcon>
           <ListItemText primary={"Minhas Cotações"} />
         </ListItem>
         <Divider />
-        <ListItem button key={"fornecedores"}>
+        <ListItem button onClick={routeChangeFornecedores}>
           <ListItemIcon>
             <LocalShippingIcon />
           </ListItemIcon>
           <ListItemText primary={"Fornecedores"} />
         </ListItem>
         <Divider />
-        <ListItem button key={"relatorios"}>
+        <ListItem button onClick={routeChangeRelatorios}>
           <ListItemIcon>
             <InsertDriveFileIcon />
           </ListItemIcon>
           <ListItemText primary={"Relatórios"} />
         </ListItem>
         <Divider />
-        <ListItem button key={"configuracoes"}>
+        <ListItem button onClick={routeChangeConfiguracoes}>
           <ListItemIcon>
             <SettingsIcon />
           </ListItemIcon>

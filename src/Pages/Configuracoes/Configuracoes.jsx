@@ -4,13 +4,13 @@ import LogoOne from "../../assets/img/logoOneStop.png";
 import Construcao from "../../assets/img/construcao.gif"
 
 
-function Dashboard() {
+function Configuracoes() {
   
   return (
     <div>
       <NavBar />
       <div style={{textAlign: "center", marginTop:"80px", marginLeft: "200px"}}>
-      <h1 >Dashboard</h1>
+      <h1 >Configurações</h1>
       <div>
       <img src={LogoOne} style={{width:"200px", marginTop: "-30px"}}/>
       <h2 style={{ marginTop: "-30px"}}>Em Breve</h2>
@@ -22,5 +22,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard; 
-
+export default Configuracoes; 
